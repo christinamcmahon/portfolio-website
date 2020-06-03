@@ -299,7 +299,11 @@ header {
 /* My Work */
 
 .my-work {
-    max-width: 1000px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.portfolio__section {
     margin: 0 auto;
 }
 
@@ -310,26 +314,16 @@ header {
 @media (min-width: 600px) {
     .portfolio__item {
         display: grid;
-        grid-template-columns: 1fr 200px;
+        grid-template-columns: 400px 1fr;
         grid-template-areas: 
-            "title img"
-            "subtitle img"
-            "text img";
+            "img title"
+            "img subtitle"
+            "img text";
         grid-column-gap: 2em;
     }
 
     .portfolio__item__title {
         grid-area: title;
-    }
-
-    .portfolio__item__stack {
-        grid-column: 1 / -1;
-        grid-row: 2;
-        position: relative;
-        left: -1em;
-        width: calc(100% + 2em);
-        padding-left: 1em;
-        padding-right: calc(200px + 4em);
     }
 
     .portfolio__img {
