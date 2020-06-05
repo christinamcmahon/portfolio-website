@@ -91,6 +91,11 @@ h3 { font-size: var(--fs-h3) }
     display: block;
 }
 
+.section__title--portfolio, 
+.section__subtitle--portfolio {
+    text-align: center;
+}
+
 .section__subtitle {
     margin: 0;
     font-size: var(--fs-h3);
