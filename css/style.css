@@ -349,7 +349,7 @@ header {
     }
 }
 
-/* footer */
+/* footer and social list */
 
 .footer {
     background: #111;
@@ -360,8 +360,9 @@ header {
 
 }
 
-.footer a { 
-    color: inherit;
+.footer a, 
+.social-list a { 
+    color: var(--clr-accent);
     text-decoration: none;
 }
 
