@@ -324,7 +324,7 @@ header {
             "img subtitle"
             "img text";
         grid-column-gap: 2em;
-        overflow: hidden;
+        /* overflow: hidden; */
     }
 
     .portfolio__item__title {
@@ -337,8 +337,7 @@ header {
         position: relative;
         z-index: 2;
         transition: 
-            transform 750ms cubic-bezier(.5, 0, .5, 1),
-            opacity 250ms linear;
+            transform 750ms cubic-bezier(.5, 0, .5, 1)
     }
 
     .portfolio__item:focus {
@@ -348,7 +347,7 @@ header {
     
     .portfolio__img:hover,
     .portfolio__item:focus .portfolio__img {
-        transform: scale(1.1);
+        transform: scale(1.07);
     }
 
     .section__subtitle--portfolio__item {
