@@ -334,9 +334,12 @@ header {
         grid-area: title;
     }
 
+    .portfolio__item__link {
+        grid-area: img;
+    }
+
     .portfolio__img {
         background-color: var(--clr-accent);
-        grid-area: img;
         min-width: 250px;
         position: relative;
         z-index: 2;
