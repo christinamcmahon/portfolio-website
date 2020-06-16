@@ -315,7 +315,13 @@ header {
     box-shadow: var(--bs);
 }
 
-@media (min-width: 600px) {
+@media (max-width: 1060px) {
+    .portfolio__img-container__overlay {
+        display: none;
+    }
+}
+
+@media (min-width: 1060px) {
     .portfolio__item {
         display: grid;
         grid-template-columns: 400px 1fr;
@@ -341,7 +347,6 @@ header {
     }
 
     .portfolio__img {
-        background-color: var(--clr-accent);
         min-width: 250px;
         position: relative;
         z-index: 2;
@@ -365,7 +370,6 @@ header {
 
     .portfolio__img-container__overlay {
         position: absolute;
-        opacity: 1;
         transition: .3s ease;
         top: 0; 
         bottom: 0;
@@ -387,7 +391,7 @@ header {
     }
 
     .portfolio__img-container:hover .portfolio__img-container__overlay {
-        opacity: .85;
+        opacity: .8;
         z-index: 100;
     }
 }
