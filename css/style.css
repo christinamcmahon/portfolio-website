@@ -51,7 +51,13 @@ body {
 }
 
 section {
-    padding: 5em 2em;
+    padding: 4em 2em;
+}
+
+@media (max-width: 1060px) {
+    section {
+        padding: 2em 2em;
+    }
 }
 
 img {
@@ -107,6 +113,13 @@ h3 { font-size: var(--fs-h3) }
     padding: .25em 1em;
     font-family: var(--ff-secondary);
     margin-bottom: 1em;
+}
+
+.section__subtitle--portfolio__item {
+    background: var(--clr-accent);
+    padding: .25em;
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-body);
 }
 
 /* header */
@@ -429,7 +442,7 @@ header {
     list-style: none;
     display: flex;
     justify-content: center;
-    margin: 2em 0 0;
+    margin: 1em 0 0;
     padding: 0;
 }
 
@@ -441,8 +454,14 @@ header {
     padding: .5em;
 }
 
-.social-list--intro a {
-    font-size: var(--fs-h3);
+.social-list {
+    font-size: var(--fs-h2);
+}
+
+@media (min-width: 600px) {
+    .social-list {
+        font-size: var(--fs-h3);
+    }
 }
 
 /* Individual portfolio item styles */
