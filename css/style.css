@@ -315,10 +315,6 @@ header {
     box-shadow: var(--bs);
 }
 
-.portfolio__item__link {
-    background-color: var(--clr-accent);
-}
-
 @media (min-width: 600px) {
     .portfolio__item {
         display: grid;
@@ -334,8 +330,14 @@ header {
         grid-area: title;
     }
 
-    .portfolio__item__link {
+    .portfolio__img-container {
         grid-area: img;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: 
+            transform 750ms cubic-bezier(.5, 0, .5, 1),
+            opacity 250ms linear;
     }
 
     .portfolio__img {
@@ -343,18 +345,10 @@ header {
         min-width: 250px;
         position: relative;
         z-index: 2;
-        transition: 
-            transform 750ms cubic-bezier(.5, 0, .5, 1),
-            opacity 250ms linear;
     }
-
-    /* .portfolio__item:focus {
-        position: relative;
-        z-index: 2;
-    } */
     
-    .portfolio__img:hover,
-    .portfolio__item:focus .portfolio__img {
+    .portfolio__img-container:hover,
+    .portfolio__item-container:focus .portfolio__img {
         transform: scale(1.07);
     }
 
@@ -369,21 +363,33 @@ header {
         padding-left: 460px;
     }
 
-    /* .portfolio__item__overlay {
-        opacity: 0;
-        transition: .3s ease;
-        background-color: red;
-    }
-
-    .portfolio__item__link i {
-        color: white;
-        font-size: 100px;
-    }
-
-    .portfolio__item__overlay:hover {
+    .portfolio__img-container__overlay {
+        position: absolute;
         opacity: 1;
+        transition: .3s ease;
+        top: 0; 
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: var(--clr-accent);
+    }
+
+    .portfolio__item__link {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        color: var(--clr-light);
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        font-size: var(--fs-h1);
+    }
+
+    .portfolio__img-container:hover .portfolio__img-container__overlay {
+        opacity: .85;
         z-index: 100;
-    } */
+    }
 }
 
 /* footer and social list */
